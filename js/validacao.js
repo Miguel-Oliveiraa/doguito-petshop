@@ -7,12 +7,19 @@ export function valida(input) {
 
   if (input.validity.valid) {
     input.parentElement.classList.remove('input-container--invalido');
+    input.parentElement.querySelector('.input-mensagem-erro').innerHTML = '';
   } else {
     input.parentElement.classList.add('input-container--invalido');
+    input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostraMensagemDeErro(
+      tipoDeInput,
+      input,
+    );
   }
 }
 
-const messagemDeErro = {
+const tiposDeErro = ['valueMissing', 'typeMismatch', 'patternMismatch', 'customError'];
+
+const messagensDeErro = {
   nome: {
     valueMissing: 'O campo nome não pode estar vazio',
   },
@@ -31,11 +38,22 @@ const messagemDeErro = {
   },
 };
 
-//Validacao da data de nascimento
 const validadores = {
   dataNascimento: (input) => validaDataNascimento(input),
 };
 
+function mostraMensagemDeErro(tipoDeInput, input) {
+  let mensagem = '';
+  tiposDeErro.forEach((erro) => {
+    if (input.validity[erro]) {
+      mensagem = messagensDeErro[tipoDeInput][erro];
+    }
+  });
+
+  return mensagem;
+}
+
+//Validacao da data de nascimento
 function validaDataNascimento(input) {
   const dataRecebida = new Date(input.value);
   let mensagem = '';
