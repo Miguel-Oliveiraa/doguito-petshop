@@ -5,6 +5,7 @@ export function valida(input) {
     validadores[tipoDeInput](input);
   }
 
+  // validando os erros do formulario e inserindo no HTML
   if (input.validity.valid) {
     input.parentElement.classList.remove('input-container--invalido');
     input.parentElement.querySelector('.input-mensagem-erro').innerHTML = '';
@@ -17,8 +18,10 @@ export function valida(input) {
   }
 }
 
+// tipos de erro
 const tiposDeErro = ['valueMissing', 'typeMismatch', 'patternMismatch', 'customError'];
 
+// messagens para os erros
 const messagensDeErro = {
   nome: {
     valueMissing: 'O campo nome não pode estar vazio',
@@ -38,10 +41,12 @@ const messagensDeErro = {
   },
 };
 
+// validadores
 const validadores = {
   dataNascimento: (input) => validaDataNascimento(input),
 };
 
+// mensagem de erro
 function mostraMensagemDeErro(tipoDeInput, input) {
   let mensagem = '';
   tiposDeErro.forEach((erro) => {
