@@ -1,5 +1,6 @@
 <h1 align="center">
   <img alt="Doguito petshop" title="doguito" src="./assets/img/doguito.svg" width="110px" />
+  <p>Doguito Petshop</p>
 </h1>
 
 <p align="center">
@@ -13,6 +14,7 @@
 </p>
 
 <br>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
