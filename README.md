@@ -28,7 +28,7 @@ O doguito petshop é uma aplicação onde sao cadastrador clientes do petshop e 
 ## 🔖 Layout
 
 <p align="center">
-  <img alt="formulario_doguito" src="./github/cadastroDoguito.png">
-  <img alt="cadastrar_produto" src="./github/cadastroProduto.png">
+  <img alt="formulario_doguito" src="./github/cadastroDoguito.png" width="100%">
+  <img alt="cadastrar_produto" src="./github/cadastroProduto.png" width="100%">
 </p>
 
