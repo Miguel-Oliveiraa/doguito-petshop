@@ -43,6 +43,10 @@ const messagensDeErro = {
     valueMissing: 'O campo de cpf não pode estar vazio',
     customError: 'O CPF digitado nao e valido',
   },
+  cep: {
+    valueMissing: 'O campo de CEP não pode estar vazio',
+    patternMismatch: 'O CEP digitado não eh valido',
+  },
 };
 
 // validadores
